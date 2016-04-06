@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="NextMeeting.Views.NextMeetingDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NextMeeting.Views"
+    xmlns:conv="using:NextMeeting.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <conv:BooleanVisibilityConverter x:Key="BooleanVisibilityConverter" />
+        <conv:NotBooleanVisibilityConverter x:Key="NotBooleanVisibilityConverter" />
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ContentControl Margin="10,20,2,0" 
+                        HorizontalContentAlignment="Stretch"
+                        ContentTemplate="{StaticResource EventTemplate}" Content="{x:Bind ViewModel}" >
+
+        </ContentControl>
+
+        <CommandBar x:Name="bottomCommandBar" Grid.Row="1"
+                    IsOpen="False" ClosedDisplayMode="Compact" 
+                    IsSticky="False">
+            <AppBarButton Label="Delete" Icon="Delete" Click="{x:Bind ViewModel.DeleteCommand, Mode=OneWay}" />
+            <AppBarButton Label="Save" Icon="Save" Click="{x:Bind ViewModel.SaveCommand, Mode=OneWay}" />
+        </CommandBar>
+    </Grid>
+</Page>

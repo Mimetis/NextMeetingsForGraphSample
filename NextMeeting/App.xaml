@@ -1,0 +1,22 @@
+﻿<Application
+    x:Class="NextMeeting.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NextMeeting"
+    xmlns:rd="using:NextMeeting.Ressources"
+    xmlns:conv="using:NextMeeting.Converters"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Ressources/StylesRessources.xaml"/>
+                <rd:DataTemplates  />
+            </ResourceDictionary.MergedDictionaries>
+            <conv:DebugConverter x:Key="DebugConverter" />
+            <x:String x:Key="ida:ClientId">[Your client id]</x:String>
+            <x:String x:Key="ida:AADInstance">https://login.microsoftonline.com/</x:String>
+            <x:String x:Key="ida:Domain">[Your tenant].onmicrosoft.com</x:String>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

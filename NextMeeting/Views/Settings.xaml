@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="NextMeeting.Views.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ctrl="using:NextMeeting.Controls"
+    xmlns:conv="using:NextMeeting.Converters"
+    xmlns:local="using:NextMeeting.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel Orientation="Vertical">
+
+            <Button Name="AboutButton" HorizontalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Left"
+                    Background="Transparent" >
+                <StackPanel HorizontalAlignment="Stretch">
+                    <TextBlock Text="about" FontSize="20"/>
+                    <TextBlock Text="NextMeeting application" FontSize="12" />
+                </StackPanel>
+            </Button>
+
+            <Button Name="CommentButton" HorizontalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Left"
+                    Background="Transparent" >
+                <StackPanel HorizontalAlignment="Stretch">
+                    <TextBlock Text="comments" FontSize="20"/>
+                    <TextBlock Text="send us a message about what you think" FontSize="12" />
+                </StackPanel>
+            </Button>
+            
+            <Button Name="DisconnectionButton" HorizontalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Left"
+                    Background="Transparent" Click="DisconnectionButton_Click" >
+                <StackPanel HorizontalAlignment="Stretch">
+                    <TextBlock Text="disconnect" FontSize="20"/>
+                    <TextBlock Text="disconnect from application" FontSize="12" />
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+        
+    </Grid>
+    
+</Page>
